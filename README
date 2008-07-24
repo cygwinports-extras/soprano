@@ -1,0 +1,233 @@
+soprano
+------------------------------------------
+Soprano (formerly known as QRDF) is a library which provides a highly 
+usable object-oriented C++/Qt4 framework for RDF data. It uses different 
+RDF storage solutions as backends through a simple plugin system. 
+Soprano is targetted at desktop applications that need a RDF data 
+storage solution. It has been optimized for easy usage and simplicity.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libclucene0-0.9.20-1
+  libQtCore4-4.4.0-1
+  libQtDBus4-4.4.0-1
+  libQtNetwork4-4.4.0-1
+  libraptor1-1.4.18-1
+  librdf0-1.0.8-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  binutils-20080523-2
+  cmake-2.4.8-3
+  cygport-0.3.13-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://soprano.sourceforge.net/
+
+Canonical download:
+  http://downloads.sourceforge.net/soprano/
+
+-------------------------------------------
+
+Build instructions:
+  unpack soprano-2.0.99-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./soprano-2.0.99-X.cygport all
+
+This will create:
+  /usr/src/soprano-2.0.99-X-src.tar.bz2
+  /usr/src/soprano-2.0.99-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(soprano)
+  /usr/bin/onto2vocabularyclass.exe
+  /usr/bin/sopranocmd.exe
+  /usr/bin/sopranod.exe
+  /usr/share/doc/soprano-2.0.99/AUTHORS
+  /usr/share/doc/soprano-2.0.99/COPYING
+  /usr/share/doc/soprano-2.0.99/COPYING.LIB
+  /usr/share/doc/soprano-2.0.99/ChangeLog
+  /usr/share/doc/soprano-2.0.99/INSTALL
+  /usr/share/doc/soprano-2.0.99/README
+  /usr/share/doc/soprano-2.0.99/TODO
+
+(libsoprano4)
+  /usr/bin/cygsoprano-4.dll
+  /usr/bin/cygsopranoclient-1.dll
+  /usr/bin/cygsopranoindex-1.dll
+  /usr/bin/cygsopranoserver-1.dll
+  /usr/lib/soprano/cygsoprano_nquadparser.dll
+  /usr/lib/soprano/cygsoprano_nquadserializer.dll
+  /usr/lib/soprano/cygsoprano_raptorparser.dll
+  /usr/lib/soprano/cygsoprano_raptorserializer.dll
+  /usr/lib/soprano/cygsoprano_redlandbackend.dll
+  /usr/share/soprano/plugins/nquadparser.desktop
+  /usr/share/soprano/plugins/nquadserializer.desktop
+  /usr/share/soprano/plugins/raptorparser.desktop
+  /usr/share/soprano/plugins/raptorserializer.desktop
+  /usr/share/soprano/plugins/redlandbackend.desktop
+  /usr/share/soprano/rules/nrl.rules
+  /usr/share/soprano/rules/rdfs.rules
+
+(libsoprano-devel)
+  /usr/include/soprano/Backend
+  /usr/include/soprano/BackendFeature
+  /usr/include/soprano/BackendOption
+  /usr/include/soprano/BackendSetting
+  /usr/include/soprano/BindingSet
+  /usr/include/soprano/Client/DBusClient
+  /usr/include/soprano/Client/DBusModel
+  /usr/include/soprano/Client/DBusNodeIterator
+  /usr/include/soprano/Client/DBusQueryResultIterator
+  /usr/include/soprano/Client/DBusStatementIterator
+  /usr/include/soprano/Client/LocalSocketClient
+  /usr/include/soprano/Client/TcpClient
+  /usr/include/soprano/Error/Error
+  /usr/include/soprano/Error/ErrorCache
+  /usr/include/soprano/Error/ErrorCode
+  /usr/include/soprano/Error/Locator
+  /usr/include/soprano/Error/ParserError
+  /usr/include/soprano/FilterModel
+  /usr/include/soprano/Global
+  /usr/include/soprano/Index/CLuceneIndex
+  /usr/include/soprano/Index/IndexFilterModel
+  /usr/include/soprano/Index/QueryHit
+  /usr/include/soprano/Inference/InferenceModel
+  /usr/include/soprano/Inference/InferenceRuleSet
+  /usr/include/soprano/Inference/NodePattern
+  /usr/include/soprano/Inference/Rule
+  /usr/include/soprano/Inference/RuleParser
+  /usr/include/soprano/Inference/StandardRuleSet
+  /usr/include/soprano/Inference/StatementPattern
+  /usr/include/soprano/Iterator
+  /usr/include/soprano/IteratorBackend
+  /usr/include/soprano/LiteralValue
+  /usr/include/soprano/Model
+  /usr/include/soprano/Node
+  /usr/include/soprano/NodeIterator
+  /usr/include/soprano/Parser
+  /usr/include/soprano/Plugin
+  /usr/include/soprano/PluginManager
+  /usr/include/soprano/Query/QueryLanguage
+  /usr/include/soprano/QueryResultIterator
+  /usr/include/soprano/QueryResultIteratorBackend
+  /usr/include/soprano/RdfSchemaWrapper
+  /usr/include/soprano/RdfSerialization
+  /usr/include/soprano/Serializer
+  /usr/include/soprano/Server/DBusExportIterator
+  /usr/include/soprano/Server/DBusExportModel
+  /usr/include/soprano/Server/ServerCore
+  /usr/include/soprano/Soprano
+  /usr/include/soprano/Statement
+  /usr/include/soprano/StatementIterator
+  /usr/include/soprano/StorageModel
+  /usr/include/soprano/Util/AsyncModel
+  /usr/include/soprano/Util/AsyncResult
+  /usr/include/soprano/Util/DummyModel
+  /usr/include/soprano/Util/MutexModel
+  /usr/include/soprano/Util/ReadOnlyModel
+  /usr/include/soprano/Util/SignalCacheModel
+  /usr/include/soprano/Util/SimpleNodeIterator
+  /usr/include/soprano/Util/SimpleStatementIterator
+  /usr/include/soprano/Version
+  /usr/include/soprano/Vocabulary/NAO
+  /usr/include/soprano/Vocabulary/NRL
+  /usr/include/soprano/Vocabulary/OWL
+  /usr/include/soprano/Vocabulary/RDF
+  /usr/include/soprano/Vocabulary/RDFS
+  /usr/include/soprano/Vocabulary/SIL
+  /usr/include/soprano/Vocabulary/XMLSchema
+  /usr/include/soprano/Vocabulary/Xesam
+  /usr/include/soprano/asyncmodel.h
+  /usr/include/soprano/backend.h
+  /usr/include/soprano/bindingset.h
+  /usr/include/soprano/cluceneindex.h
+  /usr/include/soprano/dbusclient.h
+  /usr/include/soprano/dbusexportiterator.h
+  /usr/include/soprano/dbusexportmodel.h
+  /usr/include/soprano/dbusmodel.h
+  /usr/include/soprano/dbusnodeiterator.h
+  /usr/include/soprano/dbusqueryresultiterator.h
+  /usr/include/soprano/dbusstatementiterator.h
+  /usr/include/soprano/dummymodel.h
+  /usr/include/soprano/error.h
+  /usr/include/soprano/filtermodel.h
+  /usr/include/soprano/global.h
+  /usr/include/soprano/indexfiltermodel.h
+  /usr/include/soprano/indexqueryhit.h
+  /usr/include/soprano/inferencemodel.h
+  /usr/include/soprano/inferencerule.h
+  /usr/include/soprano/inferenceruleparser.h
+  /usr/include/soprano/inferenceruleset.h
+  /usr/include/soprano/iterator.h
+  /usr/include/soprano/iteratorbackend.h
+  /usr/include/soprano/literalvalue.h
+  /usr/include/soprano/localsocketclient.h
+  /usr/include/soprano/locator.h
+  /usr/include/soprano/model.h
+  /usr/include/soprano/mutexmodel.h
+  /usr/include/soprano/nao.h
+  /usr/include/soprano/node.h
+  /usr/include/soprano/nodeiterator.h
+  /usr/include/soprano/nodepattern.h
+  /usr/include/soprano/nrl.h
+  /usr/include/soprano/owl.h
+  /usr/include/soprano/parser.h
+  /usr/include/soprano/plugin.h
+  /usr/include/soprano/pluginmanager.h
+  /usr/include/soprano/queryresultiterator.h
+  /usr/include/soprano/queryresultiteratorbackend.h
+  /usr/include/soprano/rdf.h
+  /usr/include/soprano/rdfs.h
+  /usr/include/soprano/rdfschemamodel.h
+  /usr/include/soprano/readonlymodel.h
+  /usr/include/soprano/serializer.h
+  /usr/include/soprano/servercore.h
+  /usr/include/soprano/signalcachemodel.h
+  /usr/include/soprano/sil.h
+  /usr/include/soprano/simplenodeiterator.h
+  /usr/include/soprano/simplestatementiterator.h
+  /usr/include/soprano/soprano.h
+  /usr/include/soprano/soprano_export.h
+  /usr/include/soprano/sopranotypes.h
+  /usr/include/soprano/statement.h
+  /usr/include/soprano/statementiterator.h
+  /usr/include/soprano/statementpattern.h
+  /usr/include/soprano/storagemodel.h
+  /usr/include/soprano/tcpclient.h
+  /usr/include/soprano/version.h
+  /usr/include/soprano/vocabulary.h
+  /usr/include/soprano/xesam.h
+  /usr/include/soprano/xsd.h
+  /usr/lib/libsoprano.dll.a
+  /usr/lib/libsopranoclient.dll.a
+  /usr/lib/libsopranoindex.dll.a
+  /usr/lib/libsopranoserver.dll.a
+  /usr/lib/pkgconfig/soprano.pc
+  /usr/share/dbus-1/interfaces/org.soprano.Model.xml
+  /usr/share/dbus-1/interfaces/org.soprano.NodeIterator.xml
+  /usr/share/dbus-1/interfaces/org.soprano.QueryResultIterator.xml
+  /usr/share/dbus-1/interfaces/org.soprano.Server.xml
+  /usr/share/dbus-1/interfaces/org.soprano.StatementIterator.xml
+
+------------------
+
+Port Notes:
+
+----- version 2.0.99-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
