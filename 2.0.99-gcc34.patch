@@ -1,0 +1,10 @@
+--- origsrc/soprano-2.0.99/index/cluceneindex.cpp	2008-07-03 11:03:10.000000000 -0500
++++ src/soprano-2.0.99/index/cluceneindex.cpp	2008-07-20 18:18:25.078125000 -0500
+@@ -19,6 +19,7 @@
+  * Boston, MA 02110-1301, USA.
+  */
+ 
++#include <stdio.h>
+ #include "cluceneindex.h"
+ #include "cluceneutils.h"
+ #include "clucenedocumentwrapper.h"

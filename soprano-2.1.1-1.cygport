@@ -1,0 +1,24 @@
+inherit qt4-cmake
+
+DESCRIPTION="Qt4 RDF library"
+HOMEPAGE="http://soprano.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+PATCH_URI="
+	2.0.99-module-install.patch
+	2.0.99-ansi.patch
+	2.0.99-gcc34.patch
+"
+
+PKG_NAMES="${PN} lib${PN}4 lib${PN}-devel"
+soprano_CONTENTS="usr/bin/*.exe usr/share/doc/"
+libsoprano4_CONTENTS="usr/bin/cyg${PN}-4.dll usr/bin/cyg${PN}*-1.dll
+                      usr/lib/${PN}/ usr/share/${PN}/"
+libsoprano_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/dbus-1/"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	sed -e 's|libsoprano|cygsoprano|' \
+		-i ${D}/usr/share/${PN}/plugins/*.desktop
+}

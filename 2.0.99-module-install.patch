@@ -1,14 +1,3 @@
---- origsrc/soprano-2.0.99/CMakeLists.txt	2008-07-08 18:46:59.000000000 -0500
-+++ src/soprano-2.0.99/CMakeLists.txt	2008-07-20 18:20:34.515625000 -0500
-@@ -43,7 +43,7 @@
- 
- 
- if(CMAKE_COMPILER_IS_GNUCXX AND NOT WIN32 )
--    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wnon-virtual-dtor -Wno-long-long -ansi -Wundef -Wcast-align -Wchar-subscripts -Wall -W -Wpointer-arith -Wformat-security -fno-check-new -fno-common")
-+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wnon-virtual-dtor -Wno-long-long -Wundef -Wcast-align -Wchar-subscripts -Wall -W -Wpointer-arith -Wformat-security -fno-check-new -fno-common")
- endif(CMAKE_COMPILER_IS_GNUCXX AND NOT WIN32 )
- if(MSVC)
-     add_definitions(-D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -Zc:wchar_t-)
 --- origsrc/soprano-2.0.99/backends/redland/CMakeLists.txt	2008-03-21 12:33:44.000000000 -0500
 +++ src/soprano-2.0.99/backends/redland/CMakeLists.txt	2008-07-20 19:01:44.687500000 -0500
 @@ -33,7 +33,7 @@
@@ -29,16 +18,6 @@
    )
  
  configure_file(redlandbackend.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/redlandbackend.desktop)
---- origsrc/soprano-2.0.99/index/cluceneindex.cpp	2008-07-03 11:03:10.000000000 -0500
-+++ src/soprano-2.0.99/index/cluceneindex.cpp	2008-07-20 18:18:25.078125000 -0500
-@@ -19,6 +19,7 @@
-  * Boston, MA 02110-1301, USA.
-  */
- 
-+#include <stdio.h>
- #include "cluceneindex.h"
- #include "cluceneutils.h"
- #include "clucenedocumentwrapper.h"
 --- origsrc/soprano-2.0.99/parsers/nquads/CMakeLists.txt	2007-11-23 03:56:23.000000000 -0600
 +++ src/soprano-2.0.99/parsers/nquads/CMakeLists.txt	2008-07-20 19:11:46.703125000 -0500
 @@ -13,14 +13,12 @@

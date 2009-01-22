@@ -8,18 +8,19 @@ storage solution. It has been optimized for easy usage and simplicity.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  libclucene0-0.9.20-1
-  libQtCore4-4.4.0-1
-  libQtDBus4-4.4.0-1
-  libQtNetwork4-4.4.0-1
+  libclucene3-0.9.21b-1
+  libQtCore4-4.4.2-1
+  libQtDBus4-4.4.2-1
+  libQtNetwork4-4.4.2-1
   libraptor1-1.4.18-1
   librdf0-1.0.8-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  binutils-20080523-2
-  cmake-2.4.8-3
-  cygport-0.3.13-1
+  automoc4-0.9.85-1
+  binutils-20080624-2
+  cmake-2.6.2-2
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -36,15 +37,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack soprano-2.0.99-X-src.tar.bz2
+  unpack soprano-2.1.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./soprano-2.0.99-X.cygport all
+  cygport ./soprano-2.1.1-X.cygport all
 
 This will create:
-  /usr/src/soprano-2.0.99-X-src.tar.bz2
-  /usr/src/soprano-2.0.99-X.tar.bz2
+  /usr/src/soprano-2.1.1-X-src.tar.bz2
+  /usr/src/soprano-2.1.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -54,13 +55,13 @@ Files included in the binary packages:
   /usr/bin/onto2vocabularyclass.exe
   /usr/bin/sopranocmd.exe
   /usr/bin/sopranod.exe
-  /usr/share/doc/soprano-2.0.99/AUTHORS
-  /usr/share/doc/soprano-2.0.99/COPYING
-  /usr/share/doc/soprano-2.0.99/COPYING.LIB
-  /usr/share/doc/soprano-2.0.99/ChangeLog
-  /usr/share/doc/soprano-2.0.99/INSTALL
-  /usr/share/doc/soprano-2.0.99/README
-  /usr/share/doc/soprano-2.0.99/TODO
+  /usr/share/doc/soprano-2.1.1/AUTHORS
+  /usr/share/doc/soprano-2.1.1/COPYING
+  /usr/share/doc/soprano-2.1.1/COPYING.LIB
+  /usr/share/doc/soprano-2.1.1/ChangeLog
+  /usr/share/doc/soprano-2.1.1/INSTALL
+  /usr/share/doc/soprano-2.1.1/README
+  /usr/share/doc/soprano-2.1.1/TODO
 
 (libsoprano4)
   /usr/bin/cygsoprano-4.dll
@@ -224,6 +225,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.1.1-1 -----
+Version bump.
 
 ----- version 2.0.99-1 -----
 Initial release for Cygwin.
