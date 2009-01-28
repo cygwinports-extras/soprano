@@ -17,9 +17,9 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  automoc4-0.9.85-1
+  automoc4-0.9.88-1
   binutils-20080624-2
-  cmake-2.6.2-2
+  cmake-2.6.2-3
   cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
@@ -37,15 +37,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack soprano-2.1.1-X-src.tar.bz2
+  unpack soprano-2.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./soprano-2.1.1-X.cygport all
+  cygport ./soprano-2.2-X.cygport all
 
 This will create:
-  /usr/src/soprano-2.1.1-X-src.tar.bz2
-  /usr/src/soprano-2.1.1-X.tar.bz2
+  /usr/src/soprano-2.2-X-src.tar.bz2
+  /usr/src/soprano-2.2-X.tar.bz2
 
 -------------------------------------------
 
@@ -55,13 +55,13 @@ Files included in the binary packages:
   /usr/bin/onto2vocabularyclass.exe
   /usr/bin/sopranocmd.exe
   /usr/bin/sopranod.exe
-  /usr/share/doc/soprano-2.1.1/AUTHORS
-  /usr/share/doc/soprano-2.1.1/COPYING
-  /usr/share/doc/soprano-2.1.1/COPYING.LIB
-  /usr/share/doc/soprano-2.1.1/ChangeLog
-  /usr/share/doc/soprano-2.1.1/INSTALL
-  /usr/share/doc/soprano-2.1.1/README
-  /usr/share/doc/soprano-2.1.1/TODO
+  /usr/share/doc/soprano-2.2/AUTHORS
+  /usr/share/doc/soprano-2.2/COPYING
+  /usr/share/doc/soprano-2.2/COPYING.LIB
+  /usr/share/doc/soprano-2.2/ChangeLog
+  /usr/share/doc/soprano-2.2/INSTALL
+  /usr/share/doc/soprano-2.2/README
+  /usr/share/doc/soprano-2.2/TODO
 
 (libsoprano4)
   /usr/bin/cygsoprano-4.dll
@@ -225,6 +225,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.2-1 -----
+Version bump.
 
 ----- version 2.1.1-1 -----
 Version bump.
