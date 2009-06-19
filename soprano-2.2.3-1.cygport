@@ -4,7 +4,7 @@ DESCRIPTION="Qt4 RDF library"
 HOMEPAGE="http://soprano.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 PATCH_URI="
-	2.0.99-module-install.patch
+	2.2.3-module-install.patch
 	2.0.99-ansi.patch
 	2.0.99-gcc34.patch
 "
@@ -15,14 +15,23 @@ libsoprano4_CONTENTS="usr/bin/cyg${PN}-4.dll usr/bin/cyg${PN}*-1.dll
                       usr/lib/${PN}/ usr/share/${PN}/"
 libsoprano_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/dbus-1/"
 
+# newer version ships with cmake-2.6+
+DISTCLEANFILES="cmake/modules/FindQt4.cmake"
+
 CYGCMAKE_ARGS="
 	-DJAVA_INCLUDE_PATH=JAVA_INCLUDE_PATH-NOTFOUND
 	-DJAVA_JVM_LIBRARY=JAVA_JVM_LIBRARY-NOTFOUND
+	-D__SOPRANO_HAVE_GCC_VISIBILITY=NO
 "
 
 src_install() {
 	cd ${B}
 	cyginstall
+
+	# don't install Soprano and soprano under the same directory
+	dodir ${QT4_INCLUDEDIR}/Soprano
+	mv ${D}/usr/include/Soprano/[A-Z]* ${D}${QT4_INCLUDEDIR}/Soprano
+	sed -i -e 's|\.\./soprano/|../../soprano/|' $(find ${D}${QT4_INCLUDEDIR}/ -type f)
 
 	sed -e 's|libsoprano|cygsoprano|' \
 		-i ${D}/usr/share/${PN}/plugins/*.desktop

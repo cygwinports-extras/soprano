@@ -7,25 +7,27 @@ Soprano is targetted at desktop applications that need a RDF data
 storage solution. It has been optimized for easy usage and simplicity.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libclucene3-0.9.21b-1
-  libQtCore4-4.4.2-1
-  libQtDBus4-4.4.2-1
-  libQtNetwork4-4.4.2-1
-  libraptor1-1.4.18-1
-  librdf0-1.0.8-1
+  cygwin-1.7.0-49
+  libclucene3-0.9.21b-10
+  libgcc1-4.3.2-2
+  libQtCore4-4.5.1-1
+  libQtDBus4-4.5.1-1
+  libQtNetwork4-4.5.1-1
+  libraptor1-1.4.18-10
+  librdf0-1.0.9-1
+  libstdc++6-4.3.2-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  automoc4-0.9.88-1
+  automoc4-0.9.88-10
   binutils-20080624-2
-  cmake-2.6.2-3
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  make-3.81-1
-  pkg-config-0.23a-2
+  cmake-2.6.4-10
+  cygport-0.9.7-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -37,15 +39,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack soprano-2.2-X-src.tar.bz2
+  unpack soprano-2.2.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./soprano-2.2-X.cygport all
+  cygport ./soprano-2.2.3-X.cygport all
 
 This will create:
-  /usr/src/soprano-2.2-X-src.tar.bz2
-  /usr/src/soprano-2.2-X.tar.bz2
+  /usr/src/libsoprano-devel-2.2.3-X.tar.bz2
+  /usr/src/libsoprano4-2.2.3-X.tar.bz2
+  /usr/src/soprano-2.2.3-X-src.tar.bz2
+  /usr/src/soprano-2.2.3-X.tar.bz2
 
 -------------------------------------------
 
@@ -55,13 +59,12 @@ Files included in the binary packages:
   /usr/bin/onto2vocabularyclass.exe
   /usr/bin/sopranocmd.exe
   /usr/bin/sopranod.exe
-  /usr/share/doc/soprano-2.2/AUTHORS
-  /usr/share/doc/soprano-2.2/COPYING
-  /usr/share/doc/soprano-2.2/COPYING.LIB
-  /usr/share/doc/soprano-2.2/ChangeLog
-  /usr/share/doc/soprano-2.2/INSTALL
-  /usr/share/doc/soprano-2.2/README
-  /usr/share/doc/soprano-2.2/TODO
+  /usr/share/doc/soprano/AUTHORS
+  /usr/share/doc/soprano/COPYING
+  /usr/share/doc/soprano/COPYING.LIB
+  /usr/share/doc/soprano/ChangeLog
+  /usr/share/doc/soprano/README
+  /usr/share/doc/soprano/TODO
 
 (libsoprano4)
   /usr/bin/cygsoprano-4.dll
@@ -82,75 +85,78 @@ Files included in the binary packages:
   /usr/share/soprano/rules/rdfs.rules
 
 (libsoprano-devel)
-  /usr/include/soprano/Backend
-  /usr/include/soprano/BackendFeature
-  /usr/include/soprano/BackendOption
-  /usr/include/soprano/BackendSetting
-  /usr/include/soprano/BindingSet
-  /usr/include/soprano/Client/DBusClient
-  /usr/include/soprano/Client/DBusModel
-  /usr/include/soprano/Client/DBusNodeIterator
-  /usr/include/soprano/Client/DBusQueryResultIterator
-  /usr/include/soprano/Client/DBusStatementIterator
-  /usr/include/soprano/Client/LocalSocketClient
-  /usr/include/soprano/Client/TcpClient
-  /usr/include/soprano/Error/Error
-  /usr/include/soprano/Error/ErrorCache
-  /usr/include/soprano/Error/ErrorCode
-  /usr/include/soprano/Error/Locator
-  /usr/include/soprano/Error/ParserError
-  /usr/include/soprano/FilterModel
-  /usr/include/soprano/Global
-  /usr/include/soprano/Index/CLuceneIndex
-  /usr/include/soprano/Index/IndexFilterModel
-  /usr/include/soprano/Index/QueryHit
-  /usr/include/soprano/Inference/InferenceModel
-  /usr/include/soprano/Inference/InferenceRuleSet
-  /usr/include/soprano/Inference/NodePattern
-  /usr/include/soprano/Inference/Rule
-  /usr/include/soprano/Inference/RuleParser
-  /usr/include/soprano/Inference/StandardRuleSet
-  /usr/include/soprano/Inference/StatementPattern
-  /usr/include/soprano/Iterator
-  /usr/include/soprano/IteratorBackend
-  /usr/include/soprano/LiteralValue
-  /usr/include/soprano/Model
-  /usr/include/soprano/Node
-  /usr/include/soprano/NodeIterator
-  /usr/include/soprano/Parser
-  /usr/include/soprano/Plugin
-  /usr/include/soprano/PluginManager
-  /usr/include/soprano/Query/QueryLanguage
-  /usr/include/soprano/QueryResultIterator
-  /usr/include/soprano/QueryResultIteratorBackend
-  /usr/include/soprano/RdfSchemaWrapper
-  /usr/include/soprano/RdfSerialization
-  /usr/include/soprano/Serializer
-  /usr/include/soprano/Server/DBusExportIterator
-  /usr/include/soprano/Server/DBusExportModel
-  /usr/include/soprano/Server/ServerCore
-  /usr/include/soprano/Soprano
-  /usr/include/soprano/Statement
-  /usr/include/soprano/StatementIterator
-  /usr/include/soprano/StorageModel
-  /usr/include/soprano/Util/AsyncModel
-  /usr/include/soprano/Util/AsyncResult
-  /usr/include/soprano/Util/DummyModel
-  /usr/include/soprano/Util/MutexModel
-  /usr/include/soprano/Util/ReadOnlyModel
-  /usr/include/soprano/Util/SignalCacheModel
-  /usr/include/soprano/Util/SimpleNodeIterator
-  /usr/include/soprano/Util/SimpleStatementIterator
-  /usr/include/soprano/Version
-  /usr/include/soprano/Vocabulary/NAO
-  /usr/include/soprano/Vocabulary/NRL
-  /usr/include/soprano/Vocabulary/OWL
-  /usr/include/soprano/Vocabulary/RDF
-  /usr/include/soprano/Vocabulary/RDFS
-  /usr/include/soprano/Vocabulary/SIL
-  /usr/include/soprano/Vocabulary/XMLSchema
-  /usr/include/soprano/Vocabulary/Xesam
+  /usr/include/qt4/Soprano/Backend
+  /usr/include/qt4/Soprano/BackendFeature
+  /usr/include/qt4/Soprano/BackendOption
+  /usr/include/qt4/Soprano/BackendSetting
+  /usr/include/qt4/Soprano/BackendSettings
+  /usr/include/qt4/Soprano/BindingSet
+  /usr/include/qt4/Soprano/Client/DBusClient
+  /usr/include/qt4/Soprano/Client/DBusModel
+  /usr/include/qt4/Soprano/Client/DBusNodeIterator
+  /usr/include/qt4/Soprano/Client/DBusQueryResultIterator
+  /usr/include/qt4/Soprano/Client/DBusStatementIterator
+  /usr/include/qt4/Soprano/Client/LocalSocketClient
+  /usr/include/qt4/Soprano/Client/SparqlModel
+  /usr/include/qt4/Soprano/Client/TcpClient
+  /usr/include/qt4/Soprano/Error/Error
+  /usr/include/qt4/Soprano/Error/ErrorCache
+  /usr/include/qt4/Soprano/Error/ErrorCode
+  /usr/include/qt4/Soprano/Error/Locator
+  /usr/include/qt4/Soprano/Error/ParserError
+  /usr/include/qt4/Soprano/FilterModel
+  /usr/include/qt4/Soprano/Global
+  /usr/include/qt4/Soprano/Index/CLuceneIndex
+  /usr/include/qt4/Soprano/Index/IndexFilterModel
+  /usr/include/qt4/Soprano/Index/QueryHit
+  /usr/include/qt4/Soprano/Inference/InferenceModel
+  /usr/include/qt4/Soprano/Inference/NodePattern
+  /usr/include/qt4/Soprano/Inference/Rule
+  /usr/include/qt4/Soprano/Inference/RuleParser
+  /usr/include/qt4/Soprano/Inference/RuleSet
+  /usr/include/qt4/Soprano/Inference/StandardRuleSet
+  /usr/include/qt4/Soprano/Inference/StatementPattern
+  /usr/include/qt4/Soprano/Iterator
+  /usr/include/qt4/Soprano/IteratorBackend
+  /usr/include/qt4/Soprano/LiteralValue
+  /usr/include/qt4/Soprano/Model
+  /usr/include/qt4/Soprano/Node
+  /usr/include/qt4/Soprano/NodeIterator
+  /usr/include/qt4/Soprano/Parser
+  /usr/include/qt4/Soprano/Plugin
+  /usr/include/qt4/Soprano/PluginManager
+  /usr/include/qt4/Soprano/Query/QueryLanguage
+  /usr/include/qt4/Soprano/QueryResultIterator
+  /usr/include/qt4/Soprano/QueryResultIteratorBackend
+  /usr/include/qt4/Soprano/RdfSchemaModel
+  /usr/include/qt4/Soprano/RdfSerialization
+  /usr/include/qt4/Soprano/Serializer
+  /usr/include/qt4/Soprano/Server/DBusExportIterator
+  /usr/include/qt4/Soprano/Server/DBusExportModel
+  /usr/include/qt4/Soprano/Server/ServerCore
+  /usr/include/qt4/Soprano/Soprano
+  /usr/include/qt4/Soprano/Statement
+  /usr/include/qt4/Soprano/StatementIterator
+  /usr/include/qt4/Soprano/StorageModel
+  /usr/include/qt4/Soprano/Util/AsyncModel
+  /usr/include/qt4/Soprano/Util/AsyncResult
+  /usr/include/qt4/Soprano/Util/DummyModel
+  /usr/include/qt4/Soprano/Util/MutexModel
+  /usr/include/qt4/Soprano/Util/ReadOnlyModel
+  /usr/include/qt4/Soprano/Util/SignalCacheModel
+  /usr/include/qt4/Soprano/Util/SimpleNodeIterator
+  /usr/include/qt4/Soprano/Util/SimpleStatementIterator
+  /usr/include/qt4/Soprano/Version
+  /usr/include/qt4/Soprano/Vocabulary/NAO
+  /usr/include/qt4/Soprano/Vocabulary/NRL
+  /usr/include/qt4/Soprano/Vocabulary/OWL
+  /usr/include/qt4/Soprano/Vocabulary/RDF
+  /usr/include/qt4/Soprano/Vocabulary/RDFS
+  /usr/include/qt4/Soprano/Vocabulary/SIL
+  /usr/include/qt4/Soprano/Vocabulary/XMLSchema
+  /usr/include/qt4/Soprano/Vocabulary/Xesam
   /usr/include/soprano/asyncmodel.h
+  /usr/include/soprano/asyncresult.h
   /usr/include/soprano/backend.h
   /usr/include/soprano/bindingset.h
   /usr/include/soprano/cluceneindex.h
@@ -202,6 +208,7 @@ Files included in the binary packages:
   /usr/include/soprano/soprano.h
   /usr/include/soprano/soprano_export.h
   /usr/include/soprano/sopranotypes.h
+  /usr/include/soprano/sparqlmodel.h
   /usr/include/soprano/statement.h
   /usr/include/soprano/statementiterator.h
   /usr/include/soprano/statementpattern.h
@@ -226,14 +233,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 2.2-1 -----
-Version bump.
-
------ version 2.1.1-1 -----
-Version bump.
-
------ version 2.0.99-1 -----
-Initial release for Cygwin.
+----- version 2.2.3-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

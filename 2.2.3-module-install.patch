@@ -1,23 +1,23 @@
---- origsrc/soprano-2.0.99/backends/redland/CMakeLists.txt	2008-03-21 12:33:44.000000000 -0500
-+++ src/soprano-2.0.99/backends/redland/CMakeLists.txt	2008-07-20 19:01:44.687500000 -0500
-@@ -33,7 +33,7 @@
+--- origsrc/soprano-2.2.3/backends/redland/CMakeLists.txt	2009-02-02 13:29:29.000000000 -0600
++++ src/soprano-2.2.3/backends/redland/CMakeLists.txt	2009-05-05 22:37:56.093625000 -0500
+@@ -49,7 +49,7 @@ if(BUILD_REDLAND_BACKEND)
  
- add_library(soprano_redlandcore STATIC ${redland_core_SRC})
+   qt4_automoc(${redland_backend_SRC})
  
--add_library(soprano_redlandbackend SHARED ${redland_backend_SRC})
-+add_library(soprano_redlandbackend MODULE ${redland_backend_SRC})
+-  add_library(soprano_redlandbackend SHARED ${redland_backend_SRC})
++  add_library(soprano_redlandbackend MODULE ${redland_backend_SRC})
  
- ADD_DEFINITIONS(${REDLAND_CFLAGS})
+   TARGET_LINK_LIBRARIES(soprano_redlandbackend soprano_redlandcore)
  
-@@ -54,8 +54,6 @@
+@@ -59,8 +59,6 @@ if(BUILD_REDLAND_BACKEND)
  
- INSTALL(TARGETS soprano_redlandbackend
-   LIBRARY DESTINATION ${LIB_DESTINATION}/soprano
--  RUNTIME DESTINATION bin/soprano
--  ARCHIVE DESTINATION lib/soprano
-   )
+   INSTALL(TARGETS soprano_redlandbackend
+     LIBRARY DESTINATION ${LIB_DESTINATION}/soprano
+-    RUNTIME DESTINATION bin/soprano
+-    ARCHIVE DESTINATION lib/soprano
+     )
  
- configure_file(redlandbackend.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/redlandbackend.desktop)
+   configure_file(redlandbackend.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/redlandbackend.desktop)
 --- origsrc/soprano-2.0.99/parsers/nquads/CMakeLists.txt	2007-11-23 03:56:23.000000000 -0600
 +++ src/soprano-2.0.99/parsers/nquads/CMakeLists.txt	2008-07-20 19:11:46.703125000 -0500
 @@ -13,14 +13,12 @@
