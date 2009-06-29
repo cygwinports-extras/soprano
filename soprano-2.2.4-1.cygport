@@ -4,7 +4,6 @@ DESCRIPTION="Qt4 RDF library"
 HOMEPAGE="http://soprano.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 PATCH_URI="
-	2.2.3-module-install.patch
 	2.0.99-ansi.patch
 	2.0.99-gcc34.patch
 "

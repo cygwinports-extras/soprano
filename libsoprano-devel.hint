@@ -1,5 +1,5 @@
 category: KDE
-requires: cygwin libQtCore4-devel libsoprano4 libstdc++6-devel
+requires: libQtCore4-devel libsoprano4 libstdc++6-devel
 external-source: soprano
 sdesc: "Qt4 RDF library (libdevel)"
 ldesc: "Soprano (formerly known as QRDF) is a library which provides a 

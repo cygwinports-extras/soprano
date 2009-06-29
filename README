@@ -7,7 +7,7 @@ Soprano is targetted at desktop applications that need a RDF data
 storage solution. It has been optimized for easy usage and simplicity.
 
 Runtime requirements:
-  cygwin-1.7.0-49
+  cygwin-1.7.0-50
   libclucene3-0.9.21b-10
   libgcc1-4.3.2-2
   libQtCore4-4.5.1-1
@@ -39,17 +39,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack soprano-2.2.3-X-src.tar.bz2
+  unpack soprano-2.2.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./soprano-2.2.3-X.cygport all
+  cygport ./soprano-2.2.4-X.cygport all
 
 This will create:
-  /usr/src/libsoprano-devel-2.2.3-X.tar.bz2
-  /usr/src/libsoprano4-2.2.3-X.tar.bz2
-  /usr/src/soprano-2.2.3-X-src.tar.bz2
-  /usr/src/soprano-2.2.3-X.tar.bz2
+  /usr/src/libsoprano-devel-2.2.4-X.tar.bz2
+  /usr/src/libsoprano4-2.2.4-X.tar.bz2
+  /usr/src/soprano-2.2.4-X-src.tar.bz2
+  /usr/src/soprano-2.2.4-X.tar.bz2
 
 -------------------------------------------
 
@@ -232,6 +232,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.2.4-1 -----
+Version bump.
 
 ----- version 2.2.3-1 -----
 Initial release for Cygwin 1.7.

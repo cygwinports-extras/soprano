@@ -1,5 +1,5 @@
 category: KDE
-requires: cygwin libgcc1 libQtCore4 libQtDBus4 libQtNetwork4 libsoprano4 libstdc++6
+requires: libgcc1 libQtCore4 libQtDBus4 libQtNetwork4 libsoprano4 libstdc++6
 sdesc: "Qt4 RDF library (apps)"
 ldesc: "Soprano (formerly known as QRDF) is a library which provides a 
 highly usable object-oriented C++/Qt4 framework for RDF data. It uses 
