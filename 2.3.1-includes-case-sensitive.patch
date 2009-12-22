@@ -1,0 +1,77 @@
+include/Soprano and include/soprano cannot be installed together
+
+--- origsrc/soprano-2.3.1/includes/CMakeLists.txt	2009-05-04 13:24:55.000000000 -0500
++++ src/soprano-2.3.1/includes/CMakeLists.txt	2009-12-22 00:31:11.506853700 -0600
+@@ -32,7 +32,7 @@ install(FILES
+   NRLModel
+   Graph
+   DESTINATION
+-  include/Soprano)
++  include/qt4/Soprano)
+ 
+ add_subdirectory(Error)
+ add_subdirectory(Server)
+--- origsrc/soprano-2.3.1/includes/Client/CMakeLists.txt	2008-08-23 08:57:57.000000000 -0500
++++ src/soprano-2.3.1/includes/Client/CMakeLists.txt	2009-12-22 00:31:50.702095500 -0600
+@@ -8,4 +8,4 @@ install(FILES
+   DBusQueryResultIterator
+   SparqlModel
+   DESTINATION
+-  include/Soprano/Client)
++  include/qt4/Soprano/Client)
+--- origsrc/soprano-2.3.1/includes/Error/CMakeLists.txt	2007-10-04 18:01:09.000000000 -0500
++++ src/soprano-2.3.1/includes/Error/CMakeLists.txt	2009-12-22 00:31:50.709095900 -0600
+@@ -5,4 +5,4 @@ install(FILES
+   Locator
+   ErrorCache
+   DESTINATION
+-  include/Soprano/Error)
++  include/qt4/Soprano/Error)
+--- origsrc/soprano-2.3.1/includes/Index/CMakeLists.txt	2007-10-04 18:01:09.000000000 -0500
++++ src/soprano-2.3.1/includes/Index/CMakeLists.txt	2009-12-22 00:31:50.715096200 -0600
+@@ -3,4 +3,4 @@ install(FILES
+   IndexFilterModel
+   QueryHit
+   DESTINATION
+-  include/Soprano/Index)
++  include/qt4/Soprano/Index)
+--- origsrc/soprano-2.3.1/includes/Inference/CMakeLists.txt	2008-08-29 02:40:29.000000000 -0500
++++ src/soprano-2.3.1/includes/Inference/CMakeLists.txt	2009-12-22 00:31:50.719096500 -0600
+@@ -7,4 +7,4 @@ install(FILES
+   RuleParser
+   StandardRuleSet
+   DESTINATION
+-  include/Soprano/Inference)
++  include/qt4/Soprano/Inference)
+--- origsrc/soprano-2.3.1/includes/Query/CMakeLists.txt	2007-11-08 07:47:30.000000000 -0600
++++ src/soprano-2.3.1/includes/Query/CMakeLists.txt	2009-12-22 00:31:50.723096700 -0600
+@@ -4,4 +4,4 @@ install(FILES
+ #  Serializer
+   QueryLanguage
+   DESTINATION
+-  include/Soprano/Query)
++  include/qt4/Soprano/Query)
+--- origsrc/soprano-2.3.1/includes/Server/CMakeLists.txt	2008-03-02 11:34:33.000000000 -0600
++++ src/soprano-2.3.1/includes/Server/CMakeLists.txt	2009-12-22 00:31:50.727096900 -0600
+@@ -3,4 +3,4 @@ install(FILES
+   DBusExportModel
+   DBusExportIterator
+   DESTINATION
+-  include/Soprano/Server)
++  include/qt4/Soprano/Server)
+--- origsrc/soprano-2.3.1/includes/Util/CMakeLists.txt	2009-01-19 09:02:14.000000000 -0600
++++ src/soprano-2.3.1/includes/Util/CMakeLists.txt	2009-12-22 00:31:50.731097200 -0600
+@@ -8,4 +8,4 @@ install(FILES
+   AsyncModel
+   AsyncResult
+   DESTINATION
+-  include/Soprano/Util)
++  include/qt4/Soprano/Util)
+--- origsrc/soprano-2.3.1/includes/Vocabulary/CMakeLists.txt	2008-02-29 03:28:58.000000000 -0600
++++ src/soprano-2.3.1/includes/Vocabulary/CMakeLists.txt	2009-12-22 00:31:50.735097400 -0600
+@@ -8,4 +8,4 @@ install(FILES
+   OWL
+   Xesam
+   DESTINATION
+-  include/Soprano/Vocabulary)
++  include/qt4/Soprano/Vocabulary)

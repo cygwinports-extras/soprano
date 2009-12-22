@@ -6,6 +6,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 PATCH_URI="
 	2.0.99-ansi.patch
 	2.0.99-gcc34.patch
+	2.3.1-includes-case-sensitive.patch
 "
 
 PKG_NAMES="${PN} lib${PN}4 lib${PN}-devel"
@@ -27,11 +28,5 @@ src_install() {
 	cd ${B}
 	cyginstall
 
-	# don't install Soprano and soprano under the same directory
-	dodir ${QT4_INCLUDEDIR}/Soprano
-	mv ${D}/usr/include/Soprano/[A-Z]* ${D}${QT4_INCLUDEDIR}/Soprano
-	sed -i -e 's|\.\./soprano/|../../soprano/|' $(find ${D}${QT4_INCLUDEDIR}/ -type f)
-
-	sed -e 's|libsoprano|cygsoprano|' \
-		-i ${D}/usr/share/${PN}/plugins/*.desktop
+	sed -i -e 's|libsoprano|cygsoprano|' ${D}/usr/share/${PN}/plugins/*.desktop
 }
