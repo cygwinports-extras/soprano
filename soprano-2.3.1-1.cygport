@@ -6,6 +6,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 PATCH_URI="
 	2.0.99-ansi.patch
 	2.0.99-gcc34.patch
+	2.3.1-cygwin-dll.patch
 	2.3.1-includes-case-sensitive.patch
 "
 
@@ -23,10 +24,3 @@ CYGCMAKE_ARGS="
 	-DJAVA_JVM_LIBRARY=JAVA_JVM_LIBRARY-NOTFOUND
 	-D__SOPRANO_HAVE_GCC_VISIBILITY=NO
 "
-
-src_install() {
-	cd ${B}
-	cyginstall
-
-	sed -i -e 's|libsoprano|cygsoprano|' ${D}/usr/share/${PN}/plugins/*.desktop
-}

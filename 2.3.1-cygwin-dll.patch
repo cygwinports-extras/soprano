@@ -1,0 +1,26 @@
+--- origsrc/soprano-2.3.1/soprano/sopranodirs.cpp	2009-06-21 20:12:51.000000000 -0500
++++ src/soprano-2.3.1/soprano/sopranodirs.cpp	2010-01-06 12:58:54.505672900 -0600
+@@ -35,6 +35,12 @@
+ #define PATH_SEPARATOR ':'
+ #endif
+ 
++#ifdef __CYGWIN__
++#define SOPFX "cyg"
++#else
++#define SOPFX "lib"
++#endif
++
+ 
+ 
+ namespace {
+@@ -52,8 +58,8 @@ namespace {
+                 if ( QLibrary::isLibrary( libname + extList[i] ) ) {
+                     libNames.append( libname + extList[i] );
+                 }
+-                if ( QLibrary::isLibrary( QLatin1String( "lib" ) + libname + extList[i] ) ) {
+-                    libNames.append( QLatin1String( "lib" ) + libname + extList[i] );
++                if ( QLibrary::isLibrary( QLatin1String( SOPFX ) + libname + extList[i] ) ) {
++                    libNames.append( QLatin1String( SOPFX ) + libname + extList[i] );
+                 }
+             }
+         }
