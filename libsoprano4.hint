@@ -1,5 +1,5 @@
 category: KDE
-requires: libclucene3 libgcc1 libQtCore4 libQtDBus4 libQtNetwork4 libraptor1 librdf0 libstdc++6
+requires: libclucene3 libgcc1 libQtCore4 libQtDBus4 libQtNetwork4 libQtXml4 libstdc++6
 external-source: soprano
 sdesc: "Qt4 RDF library (apps)"
 ldesc: "Soprano (formerly known as QRDF) is a library which provides a 

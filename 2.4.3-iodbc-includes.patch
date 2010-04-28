@@ -1,0 +1,13 @@
+Make sure that w32api's sql.h isn't found first
+
+--- origsrc/soprano-2.4.3/cmake/modules/FindIODBC.cmake	2009-02-20 09:46:45.000000000 -0600
++++ src/soprano-2.4.3/cmake/modules/FindIODBC.cmake	2010-04-27 02:06:39.845654800 -0500
+@@ -55,6 +55,8 @@ endif(IODBC_CONFIG)
+ find_path(IODBC_INCLUDE_DIR sql.h
+   PATHS
+   ${iodbc_INCLUDE_DIRS}
++  /usr/include
++  NO_DEFAULT_PATH
+   )
+ 
+ find_library(IODBC_LIBRARIES NAMES iodbc

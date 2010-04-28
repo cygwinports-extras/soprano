@@ -1,0 +1,25 @@
+inherit qt4-cmake
+
+DESCRIPTION="Qt4 RDF library"
+HOMEPAGE="http://soprano.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+PATCH_URI="
+	2.3.1-cygwin-dll.patch
+	2.3.1-includes-case-sensitive.patch
+	2.4.3-clucene-ansi.patch
+	2.4.3-iodbc-includes.patch
+"
+
+PKG_NAMES="${PN} lib${PN}4 lib${PN}-devel"
+soprano_CONTENTS="--exclude=cmake usr/bin/*.exe usr/lib/${PN} usr/share/doc/
+                  usr/share/${PN}/"
+libsoprano4_CONTENTS="usr/bin/cyg${PN}-4.dll usr/bin/cyg${PN}*-1.dll"
+libsoprano_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
+                           usr/share/dbus-1/ usr/share/soprano/cmake/"
+
+CYGCMAKE_ARGS="
+	-DJAVA_INCLUDE_PATH=JAVA_INCLUDE_PATH-NOTFOUND
+	-DJAVA_JVM_LIBRARY=JAVA_JVM_LIBRARY-NOTFOUND
+	-D__SOPRANO_HAVE_GCC_VISIBILITY=NO
+	-D__SOPRANO_HAVE_GCC_INLINE_VISIBILITY=NO
+"

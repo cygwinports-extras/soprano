@@ -1,0 +1,13 @@
+CLucene headers use snfprintf, which is not declared if __STRICT_ANSI__
+(-ansi is added to CMAKE_CXX_FLAGS in toplevel CMakeLists.txt).
+
+--- origsrc/soprano-2.4.3/index/CMakeLists.txt	2010-02-19 05:20:06.000000000 -0600
++++ src/soprano-2.4.3/index/CMakeLists.txt	2010-04-27 02:17:24.075502700 -0500
+@@ -28,6 +28,7 @@ configure_file(clucene-config.h.cmake ${
+ # so we must use the default (i.e. public) value for -fvisibility
+ IF(NOT WIN32)
+     IF(CMAKE_COMPILER_IS_GNUCXX)
++        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++98")
+         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fexceptions")
+         if(__SOPRANO_HAVE_GCC_VISIBILITY)
+             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=default")

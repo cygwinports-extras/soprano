@@ -7,15 +7,18 @@ Soprano is targetted at desktop applications that need a RDF data
 storage solution. It has been optimized for easy usage and simplicity.
 
 Runtime requirements:
-  cygwin-1.7.1-1
+  cygwin-1.7.5-1
   libclucene3-0.9.21b-10
   libgcc1-4.3.4-3
+  libiodbc2-3.52.7-1
   libQtCore4-4.5.3-2
-  libQtDBus4-4.5.3-2
-  libQtNetwork4-4.5.3-2
-  libraptor1-1.4.18-10
-  librdf0-1.0.9-1
+  libQtDBus4-4.6.2-1
+  libQtNetwork4-4.6.2-1
+  libQtXml4-4.6.2-1
+  libraptor1-1.4.21-1
+  librdf0-1.0.10-1
   libstdc++6-4.3.4-3
+  virtuoso-6.x
 
 Build requirements:
 (besides corresponding -devel packages)
