@@ -1,6 +1,15 @@
 inherit qt4-cmake
 
-DESCRIPTION="Qt4 RDF library"
+NAME="soprano"
+VERSION=2.8.0
+RELEASE=1
+CATEGORY="KDE"
+SUMMARY="Qt4 RDF framework"
+DESCRIPTION="Soprano (formerly known as QRDF) is a library which provides a
+highly usable object-oriented C++/Qt4 framework for RDF data. It uses different
+RDF storage solutions as backends through a simple plugin system. Soprano is
+targetted at desktop applications that need a RDF data storage solution. It has
+been optimized for easy usage and simplicity."
 HOMEPAGE="http://soprano.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 PATCH_URI="
@@ -11,9 +20,13 @@ PATCH_URI="
 "
 
 PKG_NAMES="${PN} lib${PN}4 lib${PN}-devel"
+soprano_SUMMARY="${SUMMARY} (daemon and apps)"
 soprano_CONTENTS="--exclude=cmake usr/bin/*.exe usr/lib/${PN} usr/share/doc/
                   usr/share/${PN}/"
+libsoprano4_SUMMARY="${SUMMARY} (runtime)"
+libsoprano4_REQUIRES="soprano"
 libsoprano4_CONTENTS="usr/bin/cyg${PN}-4.dll usr/bin/cyg${PN}*-1.dll"
+libsoprano_devel_SUMMARY="${SUMMARY} (libdevel)"
 libsoprano_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                            usr/share/dbus-1/ usr/share/soprano/cmake/"
 
