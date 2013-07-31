@@ -3,7 +3,7 @@ inherit qt4-cmake
 NAME="soprano"
 VERSION=2.8.0
 RELEASE=1
-CATEGORY="KDE"
+CATEGORY="Database"
 SUMMARY="Qt4 RDF framework"
 DESCRIPTION="Soprano (formerly known as QRDF) is a library which provides a
 highly usable object-oriented C++/Qt4 framework for RDF data. It uses different
@@ -11,7 +11,7 @@ RDF storage solutions as backends through a simple plugin system. Soprano is
 targetted at desktop applications that need a RDF data storage solution. It has
 been optimized for easy usage and simplicity."
 HOMEPAGE="http://soprano.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/soprano/soprano-${VERSION}.tar.bz2"
 PATCH_URI="
 	2.3.1-cygwin-dll.patch
 	2.3.1-includes-case-sensitive.patch
@@ -19,13 +19,15 @@ PATCH_URI="
 	2.4.3-iodbc-includes.patch
 "
 
-PKG_NAMES="${PN} lib${PN}4 lib${PN}-devel"
+PKG_NAMES="${NAME} lib${NAME}4 lib${NAME}-devel"
 soprano_SUMMARY="${SUMMARY} (daemon and apps)"
-soprano_CONTENTS="--exclude=cmake usr/bin/*.exe usr/lib/${PN} usr/share/doc/
-                  usr/share/${PN}/"
+soprano_CONTENTS="--exclude=cmake usr/bin/*.exe usr/lib/${NAME} usr/share/doc/
+                  usr/share/${NAME}/"
+libsoprano4_CATEGORY="Libs"
 libsoprano4_SUMMARY="${SUMMARY} (runtime)"
 libsoprano4_REQUIRES="soprano"
-libsoprano4_CONTENTS="usr/bin/cyg${PN}-4.dll usr/bin/cyg${PN}*-1.dll"
+libsoprano4_CONTENTS="usr/bin/cyg${NAME}-4.dll usr/bin/cyg${NAME}*-1.dll"
+libsoprano_devel_CATEGORY="Libs"
 libsoprano_devel_SUMMARY="${SUMMARY} (libdevel)"
 libsoprano_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                            usr/share/dbus-1/ usr/share/soprano/cmake/"
