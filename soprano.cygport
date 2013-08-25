@@ -1,7 +1,7 @@
 inherit qt4-cmake
 
 NAME="soprano"
-VERSION=2.8.0
+VERSION=2.9.3
 RELEASE=1
 CATEGORY="Database"
 SUMMARY="Qt4 RDF framework"
