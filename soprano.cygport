@@ -17,6 +17,7 @@ PATCH_URI="
 	2.3.1-includes-case-sensitive.patch
 	2.4.3-clucene-ansi.patch
 	2.4.3-iodbc-includes.patch
+	2.7.6-clucene2.patch
 "
 
 PKG_NAMES="${NAME} lib${NAME}4 lib${NAME}-devel"
@@ -33,6 +34,7 @@ libsoprano_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                            usr/share/dbus-1/ usr/share/soprano/cmake/"
 
 CYGCMAKE_ARGS="
+	-DCLUCENE_LIBRARY=/usr/lib/libclucene-shared.dll.a;/usr/lib/libclucene-core.dll.a
 	-DJAVA_INCLUDE_PATH=JAVA_INCLUDE_PATH-NOTFOUND
 	-DJAVA_JVM_LIBRARY=JAVA_JVM_LIBRARY-NOTFOUND
 	-D__SOPRANO_HAVE_GCC_VISIBILITY=NO
