@@ -1,0 +1,17 @@
+--- origsrc/soprano-2.9.4/cmake/modules/FindCLucene.cmake	2013-10-09 12:22:28.000000000 -0500
++++ src/soprano-2.9.4/cmake/modules/FindCLucene.cmake	2014-02-23 03:39:46.735002700 -0600
+@@ -69,13 +69,10 @@ if(CLUCENE_INCLUDE_DIR)
+   message(STATUS "Found CLucene include dir: ${CLUCENE_INCLUDE_DIR}")
+ endif()
+ 
+-if(WIN32)
+-  set(TRIAL_LIBRARY_PATHS ${CLUCENE_INCLUDE_DIR})
+-endif()
++set(TRIAL_LIBRARY_PATHS ${CLUCENE_INCLUDE_DIR})
+ 
+ set(CLUCENE_GOOD_VERSION TRUE)
+ 
+-get_filename_component(TRIAL_LIBRARY_DIR ${CLUCENE_LIBRARY} PATH)
+ find_path(CLUCENE_LIBRARY_DIR
+   NAMES CLucene/clucene-config.h PATHS ${TRIAL_LIBRARY_DIR} ${TRIAL_LIBRARY_PATHS} ${TRIAL_INCLUDE_PATHS} NO_DEFAULT_PATH)
+ if(CLUCENE_LIBRARY_DIR)
